@@ -1,0 +1,93 @@
+import Link from "next/link";
+import React from "react";
+
+const About = () => {
+  return (
+    <div className="flex gap-3 flex-col md:flex-row">
+      {/* left  */}
+      <div className="flex-[37%] w-full h-full rounded-sm border-2 bg-white p-4 shadow-lg ">
+        <h1 className="font-semibold text-lg">About me</h1>
+        <span className="text-sm flex items-center justify-center mt-5">
+          Success is based on your own efforts.
+        </span>
+        <div className="flex gap-2 m-4 text-sm">
+          <div>icon</div>
+          <p>Lives in Ho Chi Minh City, Vietnam.</p>
+        </div>
+        <div className="flex gap-2 m-4 text-sm">
+          <div>icon</div>
+          <p>Lives in Ho Chi Minh City, Vietnam.</p>
+        </div>
+      </div>
+      {/* {right  } */}
+      <div className="flex-[63%] w-full h-full rounded-sm border-2 bg-white p-4 shadow-lg">
+        <h1 className="font-semibold text-lg">Journey</h1>
+
+        <section>
+          <section className="flex gap-2 m-4 text-sm">
+            <div className="flex flex-col items-center">
+              <div>icon</div>
+              <div className="w-[2px] h-full bg-orange-500"></div>
+            </div>
+            <div className="w-full">
+              <div className="flex justify-between">
+                <div className="flex flex-col ">
+                  <h3>Student - Major in Software Engineer</h3>
+                  <div className="flex justify-start md:justify-end gap-2">
+                    icon
+                    <Link href="https://uni.fpt.edu.vn/en-US/Default.aspx">
+                      FPT University
+                    </Link>
+                  </div>
+                </div>
+                <span>Time</span>
+              </div>
+              <p className="mt-2">
+                Subject: OOP, Data Structure and Algorithms, UI/UX, Requirements
+                Analysis and Design...
+              </p>
+            </div>
+          </section>
+          <section className="flex gap-2 m-4 text-sm">
+            <div className="flex flex-col items-center">
+              <div>icon</div>
+              <div className="w-[2px] h-full bg-orange-500"></div>
+            </div>
+            <div className="w-full">
+              <div className="flex justify-between">
+                <div className="flex flex-col ">
+                  <h3>Student - Major in Software Engineer</h3>
+                  <div className="flex justify-start md:justify-end gap-2">
+                    icon
+                    <Link href="https://uni.fpt.edu.vn/en-US/Default.aspx">
+                      FPT University
+                    </Link>
+                  </div>
+                </div>
+                <span>Time</span>
+              </div>
+              <p className="mt-2">
+                Subject: OOP, Data Structure and Algorithms, UI/UX, Requirements
+                Analysis and Design...
+              </p>
+              <p className="mt-2">
+                Subject: OOP, Data Structure and Algorithms, UI/UX, Requirements
+                Analysis and Design...
+              </p>
+              <p className="mt-2">
+                Subject: OOP, Data Structure and Algorithms, UI/UX, Requirements
+                Analysis and Design...
+              </p>
+              <p className="mt-2">
+                Subject: OOP, Data Structure and Algorithms, UI/UX, Requirements
+                Analysis and Design...
+              </p>
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default About;
