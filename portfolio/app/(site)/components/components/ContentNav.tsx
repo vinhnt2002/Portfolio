@@ -35,26 +35,32 @@ const ContentNav: React.FC<ContentNavProps> = ({
     }
   };
   return (
-    <StickyNav>
+    <StickyNav > 
       <div
-        className={`hover:bg-slate-200 p-2 m-1   ${
-          selectTab === 0 ? "border-b-4  border-orange-500 text-orange-500" : ""
+        className={` p-2 m-1 rounded-sm  ${
+          selectTab === 0
+            ? "border-b-4  border-orange-500 text-orange-500"
+            : "hover:bg-slate-200"
         }`}
         onClick={() => handleTabClick(0)}
       >
         <h4>About me</h4>
       </div>
       <div
-        className={`hover:bg-slate-200 p-2 m-1 ${
-          selectTab === 1 ? "border-b-4 border-orange-500 text-orange-500" : ""
+        className={` p-2 m-1 rounded-sm ${
+          selectTab === 1
+            ? "border-b-4 border-orange-500 text-orange-500"
+            : "hover:bg-slate-200"
         }`}
         onClick={() => handleTabClick(1)}
       >
         <h4>Skills</h4>
       </div>
       <div
-        className={`hover:bg-slate-200 p-2 m-1 ${
-          selectTab === 2 ? "border-b-4 border-orange-500 text-orange-500" : ""
+        className={` p-2 m-1 rounded-sm ${
+          selectTab === 2
+            ? "border-b-4 border-orange-500 text-orange-500"
+            : "hover:bg-slate-200"
         }`}
         onClick={() => handleTabClick(2)}
       >

@@ -13,7 +13,10 @@ const Content: React.FC = () => {
 
   const handleScrollToSecsion = (ref: React.RefObject<HTMLDivElement>) => {
     if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
+      const offset = window.innerHeight * 0.3;
+      const targetPosition =
+        ref.current.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: targetPosition, behavior: "smooth" });
     }
   };
 
@@ -21,23 +24,23 @@ const Content: React.FC = () => {
     <div className="items-center w-full flex justify-center">
       <Wrapper>
         {/* navigation */}
-        <ContentNav 
-        onTabCLick={handleScrollToSecsion}
-        aboutRef = {aboutRef}
-        skillRef = {skillRef}
-        projectRef = {projectRef}
+        <ContentNav
+          onTabCLick={handleScrollToSecsion}
+          aboutRef={aboutRef}
+          skillRef={skillRef}
+          projectRef={projectRef}
         />
 
         {/* content  */}
-        <div ref={aboutRef}>
-          <About />
-        </div>
-        <div ref={skillRef}>
-          <Skill />
-        </div>
-        <div ref={projectRef}>
-          <Project />
-        </div>
+          <div ref={aboutRef}>
+            <About />
+          </div>
+          <div ref={skillRef}>
+            <Skill />
+          </div>
+          <div ref={projectRef}>
+            <Project />
+          </div>
       </Wrapper>
     </div>
   );

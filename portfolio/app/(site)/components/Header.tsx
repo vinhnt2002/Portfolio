@@ -29,7 +29,7 @@ const Header = () => {
           <div className="w-full md:w-[40%] ml-4 text-center md:text-start">
             <div className="flex flex-col ">
               <h1>VINH NGUYEN</h1>
-              <h5 className="text-red-400 font-bold">
+              <h5 className="text-orange-500 font-bold">
                 Web Developer - Javascript/Typescript
               </h5>
               <p className="text-sm">

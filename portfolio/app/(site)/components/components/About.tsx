@@ -1,11 +1,28 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const About = () => {
+  const [showAbout, setShowAbout] = useState(false);
+
+  useEffect(() => {
+    const showAboutTimeout = setTimeout(() => {
+      setShowAbout(true);
+    }, 300);
+
+    return () => clearTimeout(showAboutTimeout);
+  }, []);
+
   return (
-    <div className="flex gap-3 flex-col md:flex-row">
+    <div className="flex gap-3 flex-col md:flex-row relative top-[-1rem]">
       {/* left  */}
-      <div className="flex-[37%] w-full h-full rounded-sm border-2 bg-white p-4 shadow-lg ">
+      <div
+        className={`flex-[37%] w-full h-full rounded-sm border-2 bg-white p-4 shadow-lg transform ${
+          showAbout
+            ? "translate-x-0 opacity-100"
+            : "-translate-x-full opacity-0"
+        } transition-transform duration-1000 ease-linear`}
+      >
         <h1 className="font-semibold text-lg">About me</h1>
         <span className="text-sm flex items-center justify-center mt-5">
           Success is based on your own efforts.
@@ -20,7 +37,13 @@ const About = () => {
         </div>
       </div>
       {/* {right  } */}
-      <div className="flex-[63%] w-full h-full rounded-sm border-2 bg-white p-4 shadow-lg">
+      <div
+        className={`flex-[63%] w-full h-full rounded-sm border-2 bg-white p-4 shadow-lg transform ${
+          showAbout
+            ? "-translate-x-0 opacity-100"
+            : "translate-x-full opacity-0"
+        } transition-transform duration-1000 ease-linear`}
+      >
         <h1 className="font-semibold text-lg">Journey</h1>
 
         <section>

@@ -95,7 +95,8 @@ const Skill = () => {
               <span className="text-orange-500 font-bold">Frontend</span>:
               ReactJS/NextJS/React Native
             </h3>
-            <div className="ml-2 w-[300px] text-sm">
+              <ul className="list-disc ml-2 pl-4 w-[300px] text-sm">
+                
               <li>
                 <span>State management: Redux - ReduxToolkit</span>
               </li>
@@ -114,12 +115,12 @@ const Skill = () => {
               <li>
                 <span>Basic SEO</span>
               </li>
-            </div>
+              </ul>
           </div>
           {/* order  */}
           <div className="text-sm">
             <h3 className="text-orange-500 font-bold">Order:</h3>
-            <div className="ml-4 w-[300px] text-sm">
+            <ul className="list-disc ml-2 pl-4 w-[300px] text-sm">
               <li>
                 <span>State management: Redux - ReduxToolkit</span>
               </li>
@@ -138,7 +139,7 @@ const Skill = () => {
               <li>
                 <span>Basic SEO</span>
               </li>
-            </div>
+            </ul>
           </div>
         </div>
       </section>
