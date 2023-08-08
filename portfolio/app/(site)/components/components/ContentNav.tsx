@@ -37,7 +37,7 @@ const ContentNav: React.FC<ContentNavProps> = ({
   return (
     <StickyNav > 
       <div
-        className={` p-2 m-1 rounded-sm  ${
+        className={` p-2 m-1 rounded-sm overflow-hidden ${
           selectTab === 0
             ? "border-b-4  border-orange-500 text-orange-500"
             : "hover:bg-slate-200"

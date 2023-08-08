@@ -5,7 +5,7 @@ interface WrapperProps{
 }
 
 const Wrapper:React.FC<WrapperProps> = ({children}) => {
-  return <div className="lg:max-w-[1024px] w-full">{children}</div>;
+  return <div className="lg:max-w-[1024px] w-full ">{children}</div>;
 };
 
 export default Wrapper;

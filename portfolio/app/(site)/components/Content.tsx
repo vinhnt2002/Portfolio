@@ -32,7 +32,7 @@ const Content: React.FC = () => {
         />
 
         {/* content  */}
-          <div ref={aboutRef}>
+          <div ref={aboutRef} >
             <About />
           </div>
           <div ref={skillRef}>
