@@ -21,7 +21,7 @@ const About = () => {
           showAbout
             ? "translate-x-0 opacity-100"
             : "-translate-x-full opacity-0"
-        } transition-transform duration-1000 ease-linear`}
+        } transition-transform duration-500 ease-linear`}
       >
         <h1 className="font-semibold text-lg">About me</h1>
         <span className="text-sm flex items-center justify-center mt-5">
@@ -42,7 +42,7 @@ const About = () => {
           showAbout
             ? "-translate-x-0 opacity-100"
             : "translate-x-full opacity-0"
-        } transition-transform duration-1000 ease-linear`}
+        } transition-transform duration-500 ease-linear`}
       >
         <h1 className="font-semibold text-lg">Journey</h1>
 
