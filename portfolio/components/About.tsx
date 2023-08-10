@@ -17,7 +17,7 @@ const About = () => {
     <div className="flex gap-3 flex-col md:flex-row relative top-[-1rem]">
       {/* left  */}
       <div
-        className={`flex-[37%] w-full h-full rounded-sm border-2 bg-white p-4 shadow-lg transform ${
+        className={`flex-[37%] h-full rounded-sm border-2 bg-white p-4 shadow-lg transform ${
           showAbout
             ? "translate-x-0 opacity-100"
             : "-translate-x-full opacity-0"
@@ -38,7 +38,7 @@ const About = () => {
       </div>
       {/* {right  } */}
       <div
-        className={`flex-[63%] w-full h-full rounded-sm border-2 bg-white p-4 shadow-lg transform ${
+        className={`flex-[63%]  h-full rounded-sm border-2 bg-white p-4 shadow-lg transform ${
           showAbout
             ? "-translate-x-0 opacity-100"
             : "translate-x-full opacity-0"
@@ -47,12 +47,12 @@ const About = () => {
         <h1 className="font-semibold text-lg">Journey</h1>
 
         <section>
-          <section className="flex gap-2 m-4 text-sm">
+        <section className="flex gap-2 m-4 text-sm">
             <div className="flex flex-col items-center">
               <div>icon</div>
               <div className="w-[2px] h-full bg-orange-500"></div>
             </div>
-            <div className="w-full">
+            <div >
               <div className="flex justify-between">
                 <div className="flex flex-col ">
                   <h3>Student - Major in Software Engineer</h3>
@@ -65,10 +65,11 @@ const About = () => {
                 </div>
                 <span>Time</span>
               </div>
-              <p className="mt-2">
+              <p className="mt-2 w-[90%]">
                 Subject: OOP, Data Structure and Algorithms, UI/UX, Requirements
                 Analysis and Design...
               </p>
+
             </div>
           </section>
           <section className="flex gap-2 m-4 text-sm">
@@ -76,7 +77,7 @@ const About = () => {
               <div>icon</div>
               <div className="w-[2px] h-full bg-orange-500"></div>
             </div>
-            <div className="w-full">
+            <div >
               <div className="flex justify-between">
                 <div className="flex flex-col ">
                   <h3>Student - Major in Software Engineer</h3>
@@ -89,19 +90,19 @@ const About = () => {
                 </div>
                 <span>Time</span>
               </div>
-              <p className="mt-2">
+              <p className="mt-2 w-[90%]">
                 Subject: OOP, Data Structure and Algorithms, UI/UX, Requirements
                 Analysis and Design...
               </p>
-              <p className="mt-2">
+              <p className="mt-2 w-[90%]">
                 Subject: OOP, Data Structure and Algorithms, UI/UX, Requirements
                 Analysis and Design...
               </p>
-              <p className="mt-2">
+              <p className="mt-2 w-[90%]">
                 Subject: OOP, Data Structure and Algorithms, UI/UX, Requirements
                 Analysis and Design...
               </p>
-              <p className="mt-2">
+              <p className="mt-2 w-[90%]">
                 Subject: OOP, Data Structure and Algorithms, UI/UX, Requirements
                 Analysis and Design...
               </p>

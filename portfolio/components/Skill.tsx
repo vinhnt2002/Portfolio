@@ -93,7 +93,7 @@ const Skill = () => {
             </h3>
             <h3>
               <span className="text-orange-500 font-bold">Frontend</span>:
-              ReactJS/NextJS/React Native
+              ReactJS/NextJS
             </h3>
               <ul className="list-disc ml-2 pl-4 w-[300px] text-sm">
                 

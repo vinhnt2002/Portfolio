@@ -1,10 +1,11 @@
 "use client";
 import React, { useRef } from "react";
 import Wrapper from "@/components/Wrapper";
-import ContentNav from "./components/ContentNav";
-import About from "./components/About";
-import Skill from "./components/Skill";
-import Project from "./components/Project";
+import ContentNav from "@/components/ContentNav";
+import About from "@/components/About";
+import Skill from "@/components/Skill";
+import Projects from "@/components/Project";
+
 
 const Content: React.FC = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -21,7 +22,7 @@ const Content: React.FC = () => {
   };
 
   return (
-    <div className="items-center w-full flex justify-center">
+    <div className="items-center flex justify-center">
       <Wrapper>
         {/* navigation */}
         <ContentNav
@@ -39,7 +40,7 @@ const Content: React.FC = () => {
             <Skill />
           </div>
           <div ref={projectRef}>
-            <Project />
+            <Projects />
           </div>
       </Wrapper>
     </div>

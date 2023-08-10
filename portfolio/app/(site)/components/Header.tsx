@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <main className="w-full flex items-center justify-center shadow-2xl ">
+    <main className=" flex items-center justify-center shadow-2xl ">
       <Wrapper>
         <div className="lg:w-full md:w-full sm:w-full relative h-[250px] md:h-[200px]">
           <Image
@@ -26,8 +26,8 @@ const Header = () => {
             />
           </div>
 
-          <div className="w-full md:w-[40%] ml-4 text-center md:text-start">
-            <div className="flex flex-col pr-2 ">
+          <div className="md:w-[40%] ml-4 text-center md:text-start">
+            <div className="flex flex-col ">
               <h1>VINH NGUYEN</h1>
               <h5 className="text-orange-500 font-bold">
                 Web Developer - Javascript/Typescript
@@ -38,8 +38,11 @@ const Header = () => {
               </p>
             </div>
           </div>
-          <div className="flex justify-center md:justify-end w-full md:w-[40%]">
-            right
+          <div className="flex justify-center md:justify-end md:w-[40%]">
+            <div className="flex flex-col">
+            <h1>Con mèo vô tri ở trên hen</h1>
+            <h3 className="flex justify-center">right</h3>
+            </div>
           </div>
         </div>
         <Separator className="relative top-[-2.75rem]" />
