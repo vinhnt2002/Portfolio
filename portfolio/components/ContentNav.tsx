@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 
 interface ContentNavProps {
   onTabCLick: (ref: React.RefObject<HTMLDivElement>) => void;
@@ -18,6 +18,12 @@ const ContentNav: React.FC<ContentNavProps> = ({
   const [clickScroll, setClickScroll] = useState(false);
   const mobileSticky = 480;
   const desktopSticky = 380;
+
+  const tabs = [
+    { label: "About me", ref: aboutRef },
+    { label: "Skills", ref: skillRef },
+    { label: "Projects", ref: projectRef },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,27 +57,21 @@ const ContentNav: React.FC<ContentNavProps> = ({
     };
   }, [aboutRef, skillRef, projectRef, clickScroll]);
 
-  const handleTabClick = (index: number) => {
-    setClickScroll(true);
-    setSelectTab(index);
-    switch (index) {
-      case 0:
-        onTabCLick(aboutRef);
-        break;
-      case 1:
-        onTabCLick(skillRef);
-        break;
-      case 2:
-        onTabCLick(projectRef);
-        break;
-      default:
-        break;
-    }
+  const handleTabClick = useCallback(
+    (index: number) => {
+      const tabRefs = [aboutRef, skillRef, projectRef];
+      onTabCLick(tabRefs[index]);
 
-    setTimeout(() => {
-      setClickScroll(false);
-    }, 500);
-  };
+      
+      setClickScroll(true);
+      setSelectTab(index);
+
+      setTimeout(() => {
+        setClickScroll(false);
+      }, 500);
+    },
+    [aboutRef, skillRef, projectRef, onTabCLick]
+  );
 
   return (
     <>
@@ -82,36 +82,19 @@ const ContentNav: React.FC<ContentNavProps> = ({
             : "relative transform -translate-y-11 z-0 transition-transform duration-300"
         }`}
       >
-        <div
-          className={`p-2 m-1 rounded-sm ${
-            selectTab === 0
-              ? "border-b-4  border-orange-500 text-orange-500"
-              : "hover:bg-slate-200"
-          }`}
-          onClick={() => handleTabClick(0)}
-        >
-          <h4>About me</h4>
-        </div>
-        <div
-          className={`p-2 m-1 rounded-sm ${
-            selectTab === 1
-              ? "border-b-4 border-orange-500 text-orange-500"
-              : "hover:bg-slate-200"
-          }`}
-          onClick={() => handleTabClick(1)}
-        >
-          <h4>Skills</h4>
-        </div>
-        <div
-          className={`p-2 m-1 rounded-sm ${
-            selectTab === 2
-              ? "border-b-4 border-orange-500 text-orange-500"
-              : "hover:bg-slate-200"
-          }`}
-          onClick={() => handleTabClick(2)}
-        >
-          <h4>Projects</h4>
-        </div>
+        {tabs.map((tab, index) => (
+          <div
+            key={index}
+            className={`p-2  rounded-sm ${
+              selectTab === index
+                ? "border-b-4 border-orange-500 text-orange-500"
+                : "hover:bg-slate-200"
+            } ${!isSticky && "m-1"}`}
+            onClick={() => handleTabClick(index)}
+          >
+            <h4>{tab.label}</h4>
+          </div>
+        ))}
       </div>
       {isSticky && <div className="h-[3.5rem]"></div>}
     </>

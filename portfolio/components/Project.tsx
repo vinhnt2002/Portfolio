@@ -16,20 +16,22 @@ type ProjectData = {
 const Projects = () => {
   const allProjects: ProjectData[] = [
     {
-      name: "Project 1",
+      name: "Homie Store",
       imageSrc: "/image/avatar.jpg",
-      content: "Project 1 description...",
-      languages: ["JavaScript", "React", "Nextjs"],
+      content:
+        "Our team worked with Ngan, Homie's owner. She wanted an e-commerce website so customers could view product in the store",
+      languages: ["JavaScript", "MySQL", "Nextjs"],
       visit: "https://project1.example.com",
       githubProject: "https://github.com/vinhnt2002/Homie",
     },
     {
-      name: "Project 2",
+      name: "Shop-Eccomerce-Admin",
       imageSrc: "/image/avatar.jpg",
-      content: "Project 2 description...",
-      languages: ["Typescript", "Nextjs"],
-      visit: "https://project2.example.com",
-      githubProject: "https://github.com/vinhnt2002/Homie",
+      content:
+        " Our admin dashboard is going to serve as both CMS, Admin and API! Can perform basic crud operations to manage product",
+      languages: ["Typescript", "Nextjs", "MySQL"],
+      visit: "https://shop-eccomerce-admin.vercel.app/",
+      githubProject: "https://github.com/vinhnt2002/shop-eccomerce-admin",
     },
     {
       name: "Project 3",
@@ -69,7 +71,7 @@ const Projects = () => {
               </div>
               <div className="mt-4 ">
                 <h6 className="h-14 text-sm text-center text-cyan-800">
-                  {project.content}
+                  {project.content.substring(0,100)} ...
                 </h6>
                 {/* <Popover>
                   <PopoverTrigger>Open</PopoverTrigger>
@@ -78,7 +80,7 @@ const Projects = () => {
                   </PopoverContent>
                 </Popover> */}
 
-                <h1 className="ml-2 mb-2 font-bold">{project.name}</h1>
+                <h1 className="ml-2 mb-2 font-bold mt-2">{project.name}</h1>
                 <div className="flex gap-2 ">
                   {project.languages.slice(0, 3).map((language, index) => (
                     <Button

@@ -35,6 +35,123 @@
  
     --radius: 0.5rem;
   }
+
+  .container {
+    @apply h-[10.33em] w-[10.33em] absolute -translate-x-2/4 -translate-y-2/4 left-[90%] top-[96%] ;
+  }
+  /* Hide the .container on screens with a maximum width of 600px (adjust as needed) */
+    @media screen and (max-width: 600px) {
+  .container {
+    display: none;
+  }
+}
+  
+  .rabbit-body {
+    @apply bg-[#d7dfe7] h-[2.71em] w-[5.20em] absolute z-[1] m-auto rounded-[2.71em_2.71em_0_0] top-[3.75em] inset-x-0;
+    background: radial-gradient(
+      circle at 0 50%,
+      #b5becd,
+      #b5becd 60%,
+      #d7dfe7 61%
+    );
+  }
+  
+  .tail {
+    @apply absolute bg-white h-[1.13em] w-[1.13em] rounded-[50%] lg:right-[21.97em] md:right-[17.97em] top-[5.31em];
+  }
+  .face-container {
+    @apply rotate-[-10deg] origin-[0_100%] animate-[nod_5s_ease-in-out_infinite];
+  }
+  
+  @keyframes nod {
+    50% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .rabbit-face {
+    @apply bg-[#d7dfe7] h-[1.97em] w-[3.10em] absolute left-[-0.42em] top-[-0.62em] rounded-[1.56em_1.56em_0_0] before:absolute before:content-[""] before:bg-[#d7dfe7] before:w-[3.75em] before:h-[1.25em] before:left-[-0.31em] before:rounded-[1.45em] before:top-[1.87em];
+  }
+  .ear {
+    @apply bg-[#d7dfe7] h-[2.71em] w-[0.73em] relative top-[-1.35em] shadow-[2.18em_0_0_#d7dfe7] z-[-1] rounded-[0.42em_0.42em_0_0] left-[0.10em] before:absolute before:content-[""] before:bg-[#cd92b4] before:h-[2.43em] before:w-[0.46em] before:shadow-[2.18em_0_0_#cd92b4] before:rounded-[0.52em] before:left-[0.12em] before:top-[0.12em];
+  }
+  .eye-l,
+  .eye-r {
+    @apply absolute h-[0.27em] w-[0.52em] bg-[#101010] rounded-[0_0_0.62em_0.62em] top-[1.25em];
+  }
+  .eye-l {
+    @apply left-[0.52em];
+  }
+  .eye-r {
+    @apply right-[0.52em];
+  }
+  .eye-l:before,
+  .eye-r:before {
+    @apply content-[""] absolute bg-[#d7dfe7] h-[0.25em] w-[0.37em] rounded-[0_0_0.30em_0.30em] left-[0.08em] bottom-[0.08em];
+  }
+  .mouth {
+    @apply bg-white absolute h-[0.62em] w-[0.83em] m-auto rounded-[50%_50%_50%_50%/_0.20em_0.20em_0.47em_0.47em] top-[1.35em] inset-x-0 before:absolute before:content-[""] before:h-[0.31em] before:w-[0.42em] before:bg-[#101010] before:m-auto before:rounded-[50%_50%_50%_50%/_0.20em_0.20em_0.47em_0.47em] before:inset-x-0;
+  }
+  .hand-l,
+  .hand-r {
+    @apply absolute h-[0.83em] w-[1.67em] rounded-[0.31em_0.31em_0_0] bottom-0;
+  }
+  .hand-l {
+    @apply bg-[#b5becd] left-[-1.04em] before:bg-white before:right-[-0.52em];
+  }
+  .hand-r {
+    @apply bg-white left-[1.67em] before:bg-[#b5becd] before:left-[-0.52em];
+  }
+  .hand-l:before,
+  .hand-r:before {
+    @apply absolute content-[""] h-[0.67em] w-[1.04em] rounded-[0.21em_0.21em_0_0] bottom-0;
+  }
+  .carrot {
+    @apply absolute bg-[#e78f1d] w-[2.50em] h-[0.83em] left-[-1.46em] rotate-[15deg] rounded-[8.33%_21.67%_21.67%_8.33%/_25%_25%_25%_25%] bottom-[0.20em];
+  }
+  .leaf,
+  .leaf:before {
+    @apply absolute h-[0.83em] w-[0.83em] rounded-[0.83em_0];
+  }
+  .leaf {
+    @apply bg-[#c9cf55] rotate-[-40deg] left-[-1.67em] bottom-[0.83em] before:content-[""] before:bg-[#9eb42e] before:rotate-[-80deg] before:left-[-0.42em] before:bottom-0;
+  }
+  .container span {
+    @apply font-semibold text-[0.67em] text-[#4f1f22] absolute rotate-[10deg] animate-[snore_9s_infinite_linear_forwards];
+    font-family: "Poppins", sans-serif;
+  }
+  
+  @keyframes snore {
+    30% {
+      transform: rotate(10deg) translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(10deg) translateY(-2.33em);
+      opacity: 0.2;
+    }
+  }
+  
+  .container .z-1 {
+    @apply  md:left-[25.50em] lg:left-[32.50em] top-[1.83em];
+    animation-delay: 7s;
+  }
+  .container .z-2 {
+    @apply  md:left-[25.17em] lg:left-[32.17em] top-[2.33em];
+    animation-delay: 1s;
+  }
+  .container .z-3 {
+    @apply  md:left-[25em] lg:left-[32em]  top-[1.67em];
+  }
+  .shadow-rabbit {
+    @apply bg-[#d34b58] w-[8.33em] h-[0.17em] absolute m-auto rounded-[0.10em] top-[6.46em] inset-x-0;
+  }
+  @media screen and (min-width: 700px) {
+    .container {
+      @apply text-xl;
+    }
+  }
+  
  
   .dark {
     --background: 222.2 84% 4.9%;

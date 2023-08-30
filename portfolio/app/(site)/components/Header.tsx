@@ -1,4 +1,5 @@
 import Wrapper from "@/components/Wrapper";
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 
@@ -14,6 +15,29 @@ const Header = () => {
             objectFit="fill"
             className="md:rounded-bl-xl md:rounded-br-xl"
           />
+
+          {/* here  */}
+          <div className="container ">
+            <div className="tail"></div>
+            <span className="z-1">Z</span>
+            <span className="z-2">Z</span>
+            <span className="z-3">Z</span>
+            <div className="rabbit-body">
+              <div className="face-container">
+                <div className="rabbit-face">
+                  <div className="ear"></div>
+                  <div className="eye-l"></div>
+                  <div className="eye-r"></div>
+                  <div className="mouth"></div>
+                </div>
+              </div>
+              <div className="leaf"></div>
+              <div className="carrot"></div>
+              <div className="hand-l"></div>
+              <div className="hand-r"></div>
+            </div>
+            <div className="shadow-rabbit"></div>
+          </div>
         </div>
 
         <div className="flex flex-col md:flex-row items-center mt-5 relative top-[-2.75rem] left-0 ">
@@ -38,10 +62,13 @@ const Header = () => {
               </p>
             </div>
           </div>
-          <div className="flex justify-center md:justify-end md:w-[40%]">
+          <div className="flex justify-center md:justify-end md:w-[40%] mr-0 md:mr-8 my-4">
             <div className="flex flex-col">
-            <h1>Con mèo vô tri ở trên hen</h1>
-            <h3 className="flex justify-center">right</h3>
+              <h3 className="flex justify-center">
+                <Button size={"lg"} variant={"primary"}>
+                  My CV
+                </Button>
+              </h3>
             </div>
           </div>
         </div>
