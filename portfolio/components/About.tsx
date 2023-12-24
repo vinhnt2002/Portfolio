@@ -100,12 +100,12 @@ const About = () => {
               <div className="w-[2px] h-full bg-orange-500"></div>
             </div>
             <div>
-              <div className="flex justify-between">
-                <div className="flex flex-col ">
+              <div className="flex ">
+                <div className="flex-1 flex-col ">
                   <h3 className="font-bold text-base">
                     Student - Major in Software Engineer
                   </h3>
-                  <div className="flex justify-start md:justify-end gap-2 items-center">
+                  <div className="flex justify-start gap-2 items-center">
                     <Image
                       src="/image/fpt_logo.jpg"
                       alt="logo"
@@ -120,7 +120,7 @@ const About = () => {
                     </Link>
                   </div>
                 </div>
-                <span>Time</span>
+                <span className="flex-shrink-0">2020-Now</span>
               </div>
               <p className="mt-2 w-[90%]">
                 Subject: OOP, Data Structure and Algorithms, UI/UX, Requirements
@@ -135,31 +135,42 @@ const About = () => {
               </div>
               <div className="w-[2px] h-full bg-orange-500"></div>
             </div>
-            <div>
-              <div className="flex justify-between">
-                <div className="flex flex-col ">
+            <div className="w-full">
+              <div className="flex ">
+                <div className="flex-1 flex-col ">
                   <h3 className="font-bold text-base">
                     Internship - Web Developer
                   </h3>
-                  <div className="flex justify-start md:justify-end gap-2">
-                    icon
-                    <Link href="https://uni.fpt.edu.vn/en-US/Default.aspx">
-                      Wishky
+                  <div className="flex justify-start md:ml-6 gap-2 items-center">
+                    <Link
+                      href="#"
+                      className="hover:underline font-bold text-sm text-black="
+                    >
+                      Công ty TNHH Wisky
                     </Link>
                   </div>
                 </div>
-                <span>Time</span>
+                <span className="flex-shrink-0">9/2023-12/2023</span>
               </div>
-              <p className="mt-2 w-[90%]">NextJs</p>
+              <p className="mt-2 w-[90%]">- Position: FE</p>
               <p className="mt-2 w-[90%]">
                 {" "}
-                Subject: OOP, Data Structure and Algorithms, UI/UX, Requirements
-                Analysis and Design...
+                - Developed frontend interfaces using React and Material UI
               </p>
               <p className="mt-2 w-[90%]">
-                Animation/effect with css/scss, lottie
+                - Animation/effect with css/scss, lottie
               </p>
-              <p className="mt-2 w-[90%]">SEO support website in NextJS</p>
+              <p className="mt-2 w-[90%]">
+                - Collaborated with backend developers to integrate RESTful APIs
+              </p>
+              <p className="mt-2 w-[90%]">
+                - Participated in code reviews and provided feedback to improve
+                features
+              </p>
+              <p className="mt-2 w-[90%]">
+                - Used version control (Git) to manage codebase and track
+                changes
+              </p>
             </div>
           </section>
         </section>
