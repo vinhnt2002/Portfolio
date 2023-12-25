@@ -122,7 +122,7 @@ const Projects = () => {
                 </Popover> */}
 
                 <h1 className="ml-2 mb-2 font-bold mt-2">{project.name}</h1>
-                <div className="flex gap-2">
+                <div className="flex gap-2 justify-center md:justify-start">
                   {project.languages.slice(0, 3).map((language, index) => (
                     <Button
                       key={index}
