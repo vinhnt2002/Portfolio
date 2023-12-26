@@ -37,7 +37,7 @@
   }
 
   .container {
-    @apply h-[10.33em] w-[10.33em] absolute -translate-x-2/4 -translate-y-2/4 left-[90%] top-[96%] ;
+    @apply h-[10.33em] w-[10.33em] absolute -translate-x-2/4 -translate-y-2/4 left-[90%] top-[88%] ;
   }
   /* Hide the .container on screens with a maximum width of 600px (adjust as needed) */
     @media screen and (max-width: 600px) {
