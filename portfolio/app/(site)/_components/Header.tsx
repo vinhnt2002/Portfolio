@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <main className=" flex items-center justify-center shadow-2xl ">
       <Wrapper>
-        <div className="lg:w-full md:w-full sm:w-full relative h-[250px] md:h-[200px]">
+        <div className="lg:w-full md:w-full sm:w-full relative h-[250px] md:h-[200px] overflow-x-hidden">
           <Image
             src="/image/background.jpg"
             alt="image"

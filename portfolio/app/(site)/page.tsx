@@ -7,7 +7,7 @@ import Footer from "./_components/Footer";
 export default function Home() {
   return (
     <main 
-    // className="w-full flex flex-col "
+    className="w-full flex flex-col"
     >
       <Header />
       <Content/>
